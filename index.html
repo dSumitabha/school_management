@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" text="text/css" href="style.css">
+    <title>eSkool Project</title>
+</head>
+<body>
+    <div class="head">
+        <div class="head-left">
+            <ion-icon name="ellipsis-horizontal-outline" id="moreBtn"></ion-icon>
+            <img class="main-logo" src="res/logo.png" alt="skooly" />
+            <ion-icon name="reorder-three" id="menuBtn"></ion-icon>
+            <ion-icon name="expand"></ion-icon>
+        </div>
+        <div class="head-right">
+            <img src="res/apple.png" alt="Apple Store" />
+            <img src="res/google.png" alt="Google Play" />
+            <ion-icon name="chatbubbles-outline"></ion-icon>
+            <ion-icon name="notifications-outline"></ion-icon>
+            <img src="res/human.png" alt="No-Image" />
+            <span class="title">Sumitabha Dandapat</span><ion-icon name="chevron-down-outline"></ion-icon>
+        </div>
+    </div>
+    <div class="body-wrapper">
+        <nav>
+            <div class="nav-head">
+                <img src="res/institute.png" alt="Institute" />
+                <h1>Bishnupur High School</h1>
+            </div>
+            <div class="menu-wrapper">
+                <ul class="menu-items">
+                    <li class="ref_link" controller="dashboard.php"><ion-icon name="grid-outline"></ion-icon>Dashboard</li>
+                    <li class="ref_link" controller="admission_letter.php"><ion-icon name="id-card-outline"></ion-icon>Admission Letter</li>
+                    <li class="ref_link" controller="paid_fees_recipt.php"><ion-icon name="receipt-outline"></ion-icon>Paid Fees Recipt</li>
+                    <li class="ref_link" controller="my_timetable.php"><ion-icon name="videocam-outline"></ion-icon>My Timetable</li>
+                    <li class="ref_link" controller="my_report-card.php"><ion-icon name="bar-chart-outline"></ion-icon>My Report Card</li>
+                    <li class="ref_link" controller="test_results.php"><ion-icon name="brush-outline"></ion-icon>Test Results</li>
+                    <li class="ref_link" controller="exam_results.php"><ion-icon name="clipboard-outline"></ion-icon>Exam Results</li>
+                    <li class="ref_link" controller="home_assignments.php"><ion-icon name="brush-outline"></ion-icon>Home Assignments</li>
+                    <li class="ref_link" controller="online_store.php"><ion-icon name="cart-outline"></ion-icon>Online Store</li>
+                    <li class="ref_link" controller="live_class.php"><ion-icon name="videocam-outline"></ion-icon>Live Class</li>
+                    <li class="ref_link" controller="account_setting.php"><ion-icon name="settings-outline"></ion-icon>Account Setting</li>
+                    <li class="ref_link" controller="logout.php"><ion-icon name="lock-closed-outline"></ion-icon>Log Out</li>
+                </ul>
+            </div>
+        </nav>
+        <div id="main-container">
+            <div id="user-info">
+                <img src="res/human.png" alt="no-image" />
+                <h2>Sumitabha Dandapat</h2>
+                <ul class="prior-info">
+                    <li>Registration No</li>
+                    <li>Date of Admission</li>
+                    <li>Class</li>
+                    <li>Family</li>
+                    <li>Discount in Fee</li>
+                </ul>
+                <ul id="other-info">
+                    <li>Date Of Birth</li>
+                    <li>Gender</li>
+                    <li>Any Identification Mark</li>
+                    <li>Blood Group</li>
+                    <li>Disease If Any?</li>
+                    <li>Student Birth Form ID / NIC</li>
+                    <li>Cast</li>
+                    <li>Previous School</li>
+                    <li>Previous ID / Board Roll No</li>
+                    <li>Any Additional Note</li>
+                    <li>Orpahan Student</li>
+                    <li>OSC</li>
+                    <li>Religion</li>
+                    <li>Total Siblings</li>
+                </ul>
+                <ul class="prior-info">
+                    <li>Father Name</li>
+                    <li>Mother Name</li>
+                    <li>Address</li>
+                </ul> 
+            </div>
+            <div id="user-stats">
+                <div class="welcome">
+                    <div>
+                        <h3>Welcome Sumitabha Dandapat</h3>
+                        <p>to Student Portal</p>
+                        <p>You have access to all your info</p>
+                    </div>
+                    <div>
+                        <img src="res/admin-message.png" />
+                    </div>
+                </div>
+                <ul class="report-cards">
+                    <li id="atdReport">
+                        <h4>1.Atendance Report</h4>
+                        <div class="report-card">
+                            <div>
+                                <lable for="present">Presnt</lable>
+                                <button name="present"></button>
+                                <lable for="leave">Leave</lable>
+                                <button name="leave"></button>
+                                <lable for="absent">Absent</lable>
+                                <button name="absent"></button>
+                            </div>
+                            <div>
+                                <h5>Attendance</h5>
+                                <h6 style="font-size: 2rem;">0%</h6>
+                                <h5>Attendance</h5>
+                                <h6 style="font-size: 2rem;">0%</h6>
+                                <h5>Today Status</h5>
+                                <div id="atdStatus">Absent</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="examReport">
+                        <h4>2.Examination Report</h4>
+                        <div class="report-card">
+                            <div>
+                                <ion-icon name="sad-outline"></ion-icon>
+                                <h5>No Exam Data Has Been Founded!</h5>
+                            </div> 
+                        </div>
+                    </li>
+                    <li id="mockupsReport">
+                        <h4>3. Class Mockups/Tests Detail</h4>
+                        <div class="report-card">
+                            <table>
+                                <tr>
+                                  <th>Subject</th>
+                                  <th>Tests</th>
+                                  <th>Total Marks</th>
+                                  <th>Marks Obtained</th>
+                                  <th>Percentage</th>
+                                </tr>
+                                <tr>
+                                  <td>Math</td>
+                                  <td>2</td>
+                                  <td>100</td>
+                                  <td>85</td>
+                                  <td>85%</td>
+                                </tr>
+                                <tr>
+                                  <td>Science</td>
+                                  <td>3</td>
+                                  <td>150</td>
+                                  <td>120</td>
+                                  <td>80%</td>
+                                </tr>
+                              </table>
+                        </div>
+                    </li>
+                    <li id="feeReport">
+                        <h4>4.Fee Report</h4>
+                        <div class="report-card">
+                            <table>
+                                <tr>
+                                  <th>Sr#</th>
+                                  <th>Fee Month</th>
+                                  <th>Submission Date</th>
+                                  <th>Total Amount</th>
+                                  <th>Deposit</th>
+                                  <th>Due-able</th>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>January 2024</td>
+                                  <td>2024-01-15</td>
+                                  <td>$1000</td>
+                                  <td>$500</td>
+                                  <td>$500</td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td>February 2024</td>
+                                  <td>2024-02-20</td>
+                                  <td>$800</td>
+                                  <td>$400</td>
+                                  <td>$400</td>
+                                </tr>
+                              </table>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
